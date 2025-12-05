@@ -25,8 +25,7 @@ def prepare_image(image):
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(img, use_container_width=True)
-
+    st.image(image, caption="Uploaded Image", use_container_width=True)
     img_array = prepare_image(image)
     
     prediction = model.predict(img_array)[0][0]
