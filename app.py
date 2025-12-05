@@ -25,7 +25,7 @@ def prepare_image(image):
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(img, use_container_width=True)
 
     img_array = prepare_image(image)
     
